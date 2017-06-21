@@ -6,6 +6,14 @@
 			/*border: 1px solid black;
 			color: #aaa;*/
 		}
+		.pic-div{
+			max-height: 300px;
+			overflow: hidden;
+		}
+		.pic-div img{
+			height: 100%;
+			width: 95%;
+		}
 		.inline-flex{
 			display: inline-flex;
 		}
