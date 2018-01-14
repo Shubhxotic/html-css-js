@@ -1,16 +1,73 @@
 *{
 	margin: 10px;
 	padding: 2px;
+	font-size: 15px;
 	/*border: 1px solid black;*/
 }
 body{
-	height: 100%;
+	height: 100%;	
 	background-color: #777;
-	background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("https://livewellcolorado.org/wp-content/themes/FAS-THEME/assets/build/img/bmi_people.png");
+	background-image: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0)),url("https://media1.giphy.com/media/oCttutuTdvlUA/giphy.gif");
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 }
+.wrapper{
+	display: grid;/*
+
+	grid-template-columns: 40% 60%;
+	padding: 3px;
+	grid-row-gap: 1em;
+	grid-column-gap: 1em;
+	grid-gap: 5px;*/
+
+	/*grid-template-columns: 1fr 3fr 1fr;*/
+	grid-template-columns: repeat(2, 3fr 2fr);
+	 /*Repeats twice the fraction 1/3 and 2/3 i.e, 4 divs in a row*/
+	
+
+	/*grid-auto-rows: 100px; //Fixes length of each row as 100px and overflow isn't handled*/
+	grid-auto-rows: minmax(100px, auto);
+	justify-items: start; /*start/stretch;*/
+	align-items: stretch; 	
+
+}
+.wrapper > div{
+	padding: 5px;
+	grid-gap: 1em;
+	font-style: Georgia;
+}
+.wrapper > div:nth-child(odd){
+	background-color: #999;
+}
+
+.wrapper > div:nth-child(even){
+	background-color: #BBB	;
+}
+
+.box1{
+	align-self: left;
+}
+.box1{
+		justify-self: end;
+		grid-column: 1/3;
+		/*grid-row: 1/4;*/
+}
+
+.box2{
+	grid-column: 4/5;
+	/*grid-row: 1/8;*/
+	/*justify-self: end;*/
+	grid-gap: 1em;
+	border-radius: 100%;
+}
+
+.box4{
+	grid-gap: 1em;
+	grid-column: 1/3;
+	grid-row: 1/8;
+}
+
 #container{
 	height: 100%;	
 	align-content: left;
@@ -29,4 +86,10 @@ button{
 	background-color: #f00;
 	width: 10%;
 	padding: 5px;
+}
+a{
+	border: 1px solid black;
+	font-size: 25px;
+	font-weight: 600;
+	background-color: white;
 }

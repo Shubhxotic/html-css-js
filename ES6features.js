@@ -10,13 +10,14 @@ submitBtn.onclick=function(){
 	document.getElementsByTagName('h1')[0].innerText="Hello "+document.getElementsByName('name')[0].value+"!!!"
 	var	weight=parseInt(document.getElementsByName('weight')[0].value);
 	var	h=parseInt(document.getElementsByName('height')[0].value);
-	if(weight>max){
+	var bmi=weight/Math.pow(h,2);
+	if(bmi>.025){
 		document.getElementsByTagName('h2')[0].innerHTML="You are fuckin' obese";
 	}
 	else{
 		document.getElementsByTagName('h2')[0].innerHTML="You have a healthy diet. Keep going!!";	
 	}
-	var bmi=weight/Math.pow(h,2);
+	
 	document.getElementsByTagName('h3')[0].innerHTML="Your BMI is "+bmi+"."
 	console.log("Your bmi= "+bmi);
 }
